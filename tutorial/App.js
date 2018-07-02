@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import Header from './src/Header';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -24,15 +25,18 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Hello World!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        <Header />
+        <View style={styles.content}>
+          <Text style={styles.welcome}>
+            Hello World!
+          </Text>
+          <Text style={styles.instructions}>
+            To get started, edit App.js
+          </Text>
+          <Text style={styles.instructions}>
+            {instructions}
+          </Text>
+        </View>
       </View>
     );
   }
@@ -40,10 +44,13 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1
+  },
+  content: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F5FCFF'
   },
   welcome: {
     fontSize: 20,
