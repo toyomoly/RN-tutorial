@@ -25,7 +25,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Header />
+        <Header title={'Tutorial'} />
         <View style={styles.content}>
           <Text style={styles.welcome}>
             Hello World!
